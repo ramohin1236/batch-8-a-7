@@ -1,0 +1,85 @@
+[
+    {
+      "id": 1,
+      "courseName": "Introduction to C Programming",
+      "description": "Dive into the world of C programming and gain a solid foundation in this versatile language. ",
+      "img": "https://ibb.co/cX590BK",
+      "price": 15000,
+      "instructor": "John Smith",
+      "credit": 3
+    },
+    {
+      "id": 2,
+      "courseName": "Introduction to Algorithms",
+      "description": "Embark on a fascinating exploration of algorithms, the building blocks of computer science. ",
+      "img": "https://ibb.co/vdfH7DV",
+      "price": 20000,
+      "instructor": "Alice Johnson",
+      "credit": 1
+    },
+    {
+      "id": 3,
+      "courseName": "Introduction to C++ for DSA",
+      "description": "Harness the power of C++ as you delve into data structures and algorithms (DSA). ",
+      "img": "https://ibb.co/QQR5BFd",
+      "instructor": "Michael Brown",
+      "price": 5000,
+      "credit": 4
+    },
+    {
+      "id": 4,
+      "courseName": "Basic Data Structures",
+      "description": "Lay the groundwork for your coding journey by mastering fundamental data structures.",
+      "img": "https://ibb.co/4ZFnQ4w",
+      "price": 16000,
+      "instructor": "Emily Davis",
+      "credit": 6
+    },
+    {
+      "id": 5,
+      "courseName": "Introduction to OOP Python",
+      "description": "Enter the realm of object-oriented programming with Python as your guide. Discover the elegance of OOP principles.",
+      "img" : "https://ibb.co/nbVYg7z",
+      "price": 12000,
+      "instructor": "David Wilson",
+      "credit": 2
+    },
+    {
+      "id": 6,
+      "courseName": "Software Engineering",
+      "description": "Embark on a comprehensive journey into software engineering. Explore the methodologies, tools, and best practices needed to build robust.",
+      "img": "https://ibb.co/Gs1THky",
+      "price": 10000,
+      "instructor": "Sophia Adams",
+      "credit": 5
+    },
+    {
+      "id": 7,
+      "courseName": "AWS",
+      "description": "Take your first steps into the world of Amazon Web Services (AWS). Learn about cloud computing, scalable infrastructure, and cloud services that power modern applications.",
+      "img": "https://ibb.co/h7CqBNd",
+       "price": 15000,
+      "instructor": "Daniel Lee",
+      "credit": 3
+    },
+    {
+      "id": 8,
+      "courseName": "Cloud Computing",
+      "description": " Demystify the cloud and understand its transformative impact on businesses and technology.",
+      "img": "https://ibb.co/74h4gss",
+      "price": 20000,
+      "instructor": "Olivia Moore",
+      "credit": 8 
+    },
+    {
+      "id": 9,
+      "courseName": "Database (MySQL)",
+      "description": "Dive into the world of databases with a focus on MySQL. Learn how to create, manage, and optimize databases, equipping yourself with valuable skills for data-driven applications.",
+      "img": "https://ibb.co/G2yTs3L",
+      "price": 15000,
+      "instructor": "William Clark",
+      "credit": 2
+    }
+    
+  ]
+  
