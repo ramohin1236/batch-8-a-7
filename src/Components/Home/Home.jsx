@@ -6,6 +6,9 @@ import Cart from "../cart/Cart";
 const Home = () => {
 
     const [courses, setCourses]=useState([])
+
+    const [course,setCourse]=useState([])
+
     useState(()=>{
         fetch('../../../public/courses.json')
         .then(res=>res.json())
@@ -13,9 +16,12 @@ const Home = () => {
     },[]);
 
 
-    const handleBuyCourse= ()=>{
-        
+    const handleBuyCourse= (courses)=>{
+        const newCourse= [...course,courses]
+        setCourse(newCourse)
+        // console.log(newCourse)
     }
+
 
     return (
         <div className="flex w-11/12 ">
@@ -25,12 +31,15 @@ const Home = () => {
              courses.map(course=><Card
              key={course.id}
              course={course}
+             handleBuyCourse={handleBuyCourse}
              ></Card>)
             }
         </div>
 
         <div>
-            <Cart></Cart>
+            <Cart
+            course={course}
+            ></Cart>
         </div>
         </div>
     );
