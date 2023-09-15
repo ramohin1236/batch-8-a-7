@@ -25,6 +25,7 @@ const Home = () => {
         const isExist= course.find(item=>item.id === courses.id);
         let count= courses.credit;
         let price= courses.price;
+
         if(isExist){
             Swal.fire('You cannot buy this code for 2 times!')
         }
@@ -37,12 +38,16 @@ const Home = () => {
             if(count> 20){
                 return    Swal.fire('You cross your credit!')
             }
-            
+            course.forEach(p=>{
+                 price= price+ p.price;
+                console.log(price)
+            }) 
           const totalRemain = 20-count;
           setRemainingHour(totalRemain)
             const newCourse= [...course,courses]
             setCourse(newCourse);
             setTotalHour(count)
+            setTotalPrice(price)
         }
         // console.log(newCourse)
     }
@@ -67,6 +72,7 @@ const Home = () => {
             course={course}
             totalHour={totalHour}
             remainingHour={remainingHour}
+            totalPrice={totalPrice}
             ></Cart>
         </div>
         </div>
