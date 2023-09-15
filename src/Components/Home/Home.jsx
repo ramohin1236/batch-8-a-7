@@ -2,6 +2,8 @@ import { useState } from "react";
 import Card from "../Card/Card";
 import Cart from "../cart/Cart";
 
+import Swal from 'sweetalert2'
+
 
 const Home = () => {
 
@@ -17,8 +19,14 @@ const Home = () => {
 
 
     const handleBuyCourse= (courses)=>{
-        const newCourse= [...course,courses]
+        const isExist= course.find(item=>item.id === courses.id);
+        if(isExist){
+            Swal.fire('You cannot buy this code for 2 times!')
+        }
+        else{
+            const newCourse= [...course,courses]
         setCourse(newCourse)
+        }
         // console.log(newCourse)
     }
 
