@@ -7,7 +7,7 @@ const Card = ({course,handleBuyCourse}) => {
     
     return (
         <div className="card card-compact w-full bg-base-100 shadow-xl">
-  <figure><img src={img} alt="Shoes" /></figure>
+  <figure><img className="w-full p-4" src={img} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title items-center">{courseName}</h2>
     <p>{description}</p>

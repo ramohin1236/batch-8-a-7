@@ -11,7 +11,7 @@ const Home = () => {
 
     const [course,setCourse]=useState([])
     const [totalHour, setTotalHour]=useState(0);
-    const [remainingHour, setRemainingHour]=useState(0)
+    const [remainingHour, setRemainingHour]=useState(20)
     const [totalPrice,setTotalPrice]= useState(0)
 
     useState(()=>{
@@ -27,7 +27,7 @@ const Home = () => {
         let price= courses.price;
 
         if(isExist){
-            Swal.fire('You cannot buy this code for 2 times!')
+            Swal.fire('You cannot buy this course for 2 times!')
         }
         else{
             course.forEach(time=>{
