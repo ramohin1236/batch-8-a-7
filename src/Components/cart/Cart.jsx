@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 
 
-const Cart = ({course}) => {
-    // console.log(course)
+const Cart = ({course,totalHour,remainingHour}) => {
+    console.log(course)
     return (
         <div className="w-96 ml-12 border black  h-[550px] rounded-xl shadow-2xl ">
-             <h1 className="text-xl text-blue-500 font-bold mt-4 mb-8 text-center">Credit Hour Remaining  hr</h1> 
+             <h1 className="text-xl text-blue-500 font-bold mt-4 mb-8 text-center">Credit Hour Remaining {remainingHour}  hr </h1> 
              <hr className=""/>
              <h4 className="text-black font-bold ml-6 text-xl mt-4">Course Name {course.length}</h4>
              <div className="ml-4 mt-6">
@@ -17,6 +17,10 @@ const Cart = ({course}) => {
                     </li>)
                 }
              </div>
+             <div>
+                <hr />
+        <p className="mt-10 ml-6 font-bold">Total Credit Hour: {totalHour}</p>
+    </div>
         </div>
     );
 };

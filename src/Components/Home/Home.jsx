@@ -10,6 +10,9 @@ const Home = () => {
     const [courses, setCourses]=useState([])
 
     const [course,setCourse]=useState([])
+    const [totalHour, setTotalHour]=useState(0);
+    const [remainingHour, setRemainingHour]=useState(0)
+    const [totalPrice,setTotalPrice]= useState(0)
 
     useState(()=>{
         fetch('../../../public/courses.json')
@@ -20,12 +23,26 @@ const Home = () => {
 
     const handleBuyCourse= (courses)=>{
         const isExist= course.find(item=>item.id === courses.id);
+        let count= courses.credit;
+        let price= courses.price;
         if(isExist){
             Swal.fire('You cannot buy this code for 2 times!')
         }
         else{
+            course.forEach(time=>{
+                count= count+ time.credit;
+                console.log(count);
+            })
+
+            if(count> 20){
+                return    Swal.fire('You cross your credit!')
+            }
+            
+          const totalRemain = 20-count;
+          setRemainingHour(totalRemain)
             const newCourse= [...course,courses]
-        setCourse(newCourse)
+            setCourse(newCourse);
+            setTotalHour(count)
         }
         // console.log(newCourse)
     }
@@ -40,6 +57,7 @@ const Home = () => {
              key={course.id}
              course={course}
              handleBuyCourse={handleBuyCourse}
+             
              ></Card>)
             }
         </div>
@@ -47,6 +65,8 @@ const Home = () => {
         <div>
             <Cart
             course={course}
+            totalHour={totalHour}
+            remainingHour={remainingHour}
             ></Cart>
         </div>
         </div>
