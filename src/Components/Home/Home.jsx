@@ -15,7 +15,7 @@ const Home = () => {
     const [totalPrice,setTotalPrice]= useState(0)
 
     useState(()=>{
-        fetch('../../../public/courses.json')
+        fetch('courses.json')
         .then(res=>res.json())
         .then(data=>setCourses(data))
     },[]);
@@ -54,7 +54,7 @@ const Home = () => {
 
 
     return (
-        <div className="flex w-11/12 ">
+        <div className="flex w-11/12 mt-4 ">
         
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-4 ml-10 mt-10">
             {
